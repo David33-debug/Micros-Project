@@ -1,0 +1,42 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc\m328pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\Debug\Project.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Project.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Project.map</FILE>
+  <FILE>Project.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <main><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>9</LINE></main>
+  <check><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>72</LINE></check>
+  <count><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>68</LINE></count>
+  <Modes><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>29</LINE></Modes>
+  <stay><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>46</LINE></stay>
+  <Gamestay><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>52</LINE></Gamestay>
+  <startTest><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>36</LINE></startTest>
+  <delay><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>87</LINE></delay>
+  <sleeping><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>58</LINE></sleeping>
+  <play><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>102</LINE></play>
+  <task><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>62</LINE></task>
+  <display><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>83</LINE></display>
+  <setting><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>78</LINE></setting>
+  <delay1><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>89</LINE></delay1>
+  <delay2><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>91</LINE></delay2>
+  <delay3><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>93</LINE></delay3>
+ </LABELS>
+</ASSEMBLER_INFO>
