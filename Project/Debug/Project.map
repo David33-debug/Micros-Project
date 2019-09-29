@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm Sat Sep 28 16:13:51 2019
+AVRASM ver. 2.2.7  C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm Sun Sep 29 18:15:03 2019
 
 
 EQU  SIGNATURE_000 0000001e
@@ -696,18 +696,28 @@ EQU  TWIaddr      00000030
 EQU  SPMRaddr     00000032
 EQU  INT_VECTORS_SIZE 00000034
 CSEG main         00000022
-CSEG check        0000005b
-CSEG count        00000059
+CSEG check        00000061
+CSEG count        0000005f
 CSEG Modes        00000037
 CSEG stay         00000047
-CSEG Gamestay     0000004c
+CSEG Gamestay     0000004d
 CSEG startTest    0000003d
-CSEG delay        00000066
-CSEG sleeping     00000051
-CSEG play         00000070
-CSEG task         00000054
-CSEG display      00000063
-CSEG setting      00000060
-CSEG delay1       00000067
-CSEG delay2       00000068
-CSEG delay3       00000069
+CSEG delay        0000006c
+CSEG sleeping     00000055
+CSEG play         00000076
+CSEG task         00000058
+CSEG gamePlay     00000081
+CSEG display      00000069
+CSEG setting      00000066
+CSEG delay1       0000006d
+CSEG delay2       0000006e
+CSEG delay3       0000006f
+CSEG delay4S      00000097
+CSEG output2      0000008e
+CSEG output1      00000086
+CSEG output3      00000093
+CSEG loop1        0000009b
+CSEG loop2        0000009c
+CSEG loop3        0000009d
+CSEG loop4        0000009e
+CSEG loop5        0000009f

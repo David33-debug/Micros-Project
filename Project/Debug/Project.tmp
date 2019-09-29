@@ -23,20 +23,30 @@
  </OUTPUT_FILES>
  <LABELS>
   <main><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>9</LINE></main>
-  <check><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>72</LINE></check>
-  <count><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>68</LINE></count>
+  <check><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>78</LINE></check>
+  <count><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>74</LINE></count>
   <Modes><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>29</LINE></Modes>
   <stay><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>46</LINE></stay>
-  <Gamestay><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>52</LINE></Gamestay>
+  <Gamestay><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>53</LINE></Gamestay>
   <startTest><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>36</LINE></startTest>
-  <delay><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>87</LINE></delay>
-  <sleeping><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>58</LINE></sleeping>
-  <play><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>102</LINE></play>
-  <task><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>62</LINE></task>
-  <display><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>83</LINE></display>
-  <setting><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>78</LINE></setting>
-  <delay1><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>89</LINE></delay1>
-  <delay2><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>91</LINE></delay2>
-  <delay3><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>93</LINE></delay3>
+  <delay><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>93</LINE></delay>
+  <sleeping><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>62</LINE></sleeping>
+  <play><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>108</LINE></play>
+  <task><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>66</LINE></task>
+  <gamePlay><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>118</LINE></gamePlay>
+  <display><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>89</LINE></display>
+  <setting><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>84</LINE></setting>
+  <delay1><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>95</LINE></delay1>
+  <delay2><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>97</LINE></delay2>
+  <delay3><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>99</LINE></delay3>
+  <delay4S><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>144</LINE></delay4S>
+  <output2><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>134</LINE></output2>
+  <output1><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>126</LINE></output1>
+  <output3><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>139</LINE></output3>
+  <loop1><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>149</LINE></loop1>
+  <loop2><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>151</LINE></loop2>
+  <loop3><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>153</LINE></loop3>
+  <loop4><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>155</LINE></loop4>
+  <loop5><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>157</LINE></loop5>
  </LABELS>
 </ASSEMBLER_INFO>
