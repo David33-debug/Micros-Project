@@ -51,7 +51,7 @@ breq startTest
 jmp Modes
 
 Gamestay:
-ldi r28,1
+ldi r28,0
 ldi r20,1
 ldi r29,0
 in r26, pinc
@@ -106,8 +106,8 @@ brne delay1
 ret
 
 play:
-ldi r27,0
-out portd, r27
+;ldi r27,0
+;out portd, r27
 ldi r27, 0b00000111
 in r24, tcnt0
 and r27, r24
@@ -116,29 +116,80 @@ out portb, r27
 call delay4S
 jmp startTest
 gamePlay:
-out portb, r18
-cp r27,r18
-breq output2
-cp r27,r18
-brne output1
-
+cpse r27,r18
+jmp output2
+jmp output1
 
 output1:
+inc r28
+;ldi r20,2
+inc r29
+inc r29
+ldi r19,0b10000000
+out portd, r19
+cpi r28,6
+breq Score
+jmp play
+
+output2:
+inc r28
 cpi r18,10
 brsh output3
-ldi r20,2
-add r29,r20
-ldi r18,0b01000000
-out portd, r18
-jmp Modes
-output2:
 subi r29,1
-ldi r19, 0b10000000
+ldi r19, 0b01000000
 out portd, r19
-jmp Modes
+;out portb, r28 
+cpi r28,6
+breq Score
+jmp play
 output3:
 ldi r19,0b00100000
 out portd, r19
+;out portb, r28
+cpi r28,6
+breq Score
+jmp play
+
+Score:
+ldi r28,0
+cpi r29,0
+brlt score1
+cpi r29,0
+brge score2
+;out portb, r28
+jmp Modes
+
+score1:
+ldi r19, 0b01000000
+out portd, r19
+com r29
+ldi r19,1
+add  r29,r19
+out portb,r29
+jmp Modes
+score2:
+ldi r18,0b10000000
+out portd, r18
+cpi r29,10
+breq ten
+cpi r29,11
+breq elvn
+cpi r19,12
+breq twlv
+out portb, r29
+jmp Modes
+
+ten:
+ldi r18, 0b00010000
+out portb, r18
+jmp Modes
+elvn:
+ldi r18, 0b00010001
+out portb, r18
+jmp Modes
+twlv:
+ldi r18, 0b00010010
+out portb, r18
 jmp Modes
 
 delay4S:

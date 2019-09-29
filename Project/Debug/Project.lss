@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm Sun Sep 29 18:15:03 2019
+AVRASM ver. 2.2.7  C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm Sun Sep 29 23:06:30 2019
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc\m328pdef.inc'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc\m328pdef.inc'
@@ -1037,7 +1037,7 @@ AVRASM ver. 2.2.7  C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\mai
 00004b 940c 0037                 jmp Modes
                                  
                                  Gamestay:
-00004d e0c1                      ldi r28,1
+00004d e0c0                      ldi r28,0
 00004e e041                      ldi r20,1
 00004f e0d0                      ldi r29,0
 000050 b1a6                      in r26, pinc
@@ -1053,7 +1053,7 @@ AVRASM ver. 2.2.7  C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\mai
 000058 94f8                      cli
 000059 9526                      lsr r18
 00005a 3041                      cpi r20,1
-00005b f129                      breq gamePlay
+00005b f119                      breq gamePlay
 00005c 940c 0069                 jmp display
 00005e 9508                      ret
                                  
@@ -1092,67 +1092,118 @@ AVRASM ver. 2.2.7  C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\mai
 000075 9508                      ret
                                  
                                  play:
-000076 e0b0                      ldi r27,0
-000077 b9bb                      out portd, r27
-000078 e0b7                      ldi r27, 0b00000111
-000079 b586                      in r24, tcnt0
-00007a 23b8                      and r27, r24
-00007b 95b3                      inc r27
-00007c b9b5                      out portb, r27 
-00007d 940e 0097                 call delay4S
-00007f 940c 003d                 jmp startTest
+                                 ;ldi r27,0
+                                 ;out portd, r27
+000076 e0b7                      ldi r27, 0b00000111
+000077 b586                      in r24, tcnt0
+000078 23b8                      and r27, r24
+000079 95b3                      inc r27
+00007a b9b5                      out portb, r27 
+00007b 940e 00c3                 call delay4S
+00007d 940c 003d                 jmp startTest
                                  gamePlay:
-000081 b925                      out portb, r18
-000082 17b2                      cp r27,r18
-000083 f051                      breq output2
-000084 17b2                      cp r27,r18
-000085 f401                      brne output1
-                                 
+00007f 13b2                      cpse r27,r18
+000080 940c 008d                 jmp output2
+000082 940c 0084                 jmp output1
                                  
                                  output1:
-000086 302a                      cpi r18,10
-000087 f458                      brsh output3
-000088 e042                      ldi r20,2
-000089 0fd4                      add r29,r20
-00008a e420                      ldi r18,0b01000000
-00008b b92b                      out portd, r18
-00008c 940c 0037                 jmp Modes
+000084 95c3                      inc r28
+                                 ;ldi r20,2
+000085 95d3                      inc r29
+000086 95d3                      inc r29
+000087 e830                      ldi r19,0b10000000
+000088 b93b                      out portd, r19
+000089 30c6                      cpi r28,6
+00008a f091                      breq Score
+00008b 940c 0076                 jmp play
+                                 
                                  output2:
-00008e 50d1                      subi r29,1
-00008f e830                      ldi r19, 0b10000000
-000090 b93b                      out portd, r19
-000091 940c 0037                 jmp Modes
+00008d 95c3                      inc r28
+00008e 302a                      cpi r18,10
+00008f f438                      brsh output3
+000090 50d1                      subi r29,1
+000091 e430                      ldi r19, 0b01000000
+000092 b93b                      out portd, r19
+                                 ;out portb, r28 
+000093 30c6                      cpi r28,6
+000094 f041                      breq Score
+000095 940c 0076                 jmp play
                                  output3:
-000093 e230                      ldi r19,0b00100000
-000094 b93b                      out portd, r19
-000095 940c 0037                 jmp Modes
+000097 e230                      ldi r19,0b00100000
+000098 b93b                      out portd, r19
+                                 ;out portb, r28
+000099 30c6                      cpi r28,6
+00009a f011                      breq Score
+00009b 940c 0076                 jmp play
+                                 
+                                 Score:
+00009d e0c0                      ldi r28,0
+00009e 30d0                      cpi r29,0
+00009f f024                      brlt score1
+0000a0 30d0                      cpi r29,0
+0000a1 f454                      brge score2
+                                 ;out portb, r28
+0000a2 940c 0037                 jmp Modes
+                                 
+                                 score1:
+0000a4 e430                      ldi r19, 0b01000000
+0000a5 b93b                      out portd, r19
+0000a6 95d0                      com r29
+0000a7 e031                      ldi r19,1
+0000a8 0fd3                      add  r29,r19
+0000a9 b9d5                      out portb,r29
+0000aa 940c 0037                 jmp Modes
+                                 score2:
+0000ac e820                      ldi r18,0b10000000
+0000ad b92b                      out portd, r18
+0000ae 30da                      cpi r29,10
+0000af f039                      breq ten
+0000b0 30db                      cpi r29,11
+0000b1 f049                      breq elvn
+0000b2 303c                      cpi r19,12
+0000b3 f059                      breq twlv
+0000b4 b9d5                      out portb, r29
+0000b5 940c 0037                 jmp Modes
+                                 
+                                 ten:
+0000b7 e120                      ldi r18, 0b00010000
+0000b8 b925                      out portb, r18
+0000b9 940c 0037                 jmp Modes
+                                 elvn:
+0000bb e121                      ldi r18, 0b00010001
+0000bc b925                      out portb, r18
+0000bd 940c 0037                 jmp Modes
+                                 twlv:
+0000bf e122                      ldi r18, 0b00010010
+0000c0 b925                      out portb, r18
+0000c1 940c 0037                 jmp Modes
                                  
                                  delay4S:
-000097 930f                      push r16
-000098 931f                      push r17
-000099 932f                      push r18
-00009a 933f                      push r19
+0000c3 930f                      push r16
+0000c4 931f                      push r17
+0000c5 932f                      push r18
+0000c6 933f                      push r19
                                  loop1:
-00009b e634                      ldi r19, 100
+0000c7 e634                      ldi r19, 100
                                  loop2:
-00009c e322                      ldi r18,50
+0000c8 e322                      ldi r18,50
                                  loop3:
-00009d e411                      ldi r17,65
+0000c9 e411                      ldi r17,65
                                  loop4:
-00009e e401                      ldi r16, 65
+0000ca e401                      ldi r16, 65
                                  loop5:
-00009f 950a                      dec r16
-0000a0 f7f1                      brne loop5
-0000a1 951a                      dec r17
-0000a2 f7d9                      brne loop4
-0000a3 952a                      dec r18
-0000a4 f7c1                      brne loop3
-0000a5 953a                      dec r19
-0000a6 f7a9                      brne loop2
-0000a7 913f                      pop r19
-0000a8 912f                      pop r18
-0000a9 911f                      pop r17
-0000aa 910f                      pop r16
+0000cb 950a                      dec r16
+0000cc f7f1                      brne loop5
+0000cd 951a                      dec r17
+0000ce f7d9                      brne loop4
+0000cf 952a                      dec r18
+0000d0 f7c1                      brne loop3
+0000d1 953a                      dec r19
+0000d2 f7a9                      brne loop2
+0000d3 913f                      pop r19
+0000d4 912f                      pop r18
+0000d5 911f                      pop r17
+0000d6 910f                      pop r16
 
 
 RESOURCE USE INFORMATION
@@ -1172,37 +1223,37 @@ counted separately from r26..r31 here.
 "ATmega328P" register use summary:
 x  :   0 y  :   0 z  :   0 r0 :   0 r1 :   0 r2 :   0 r3 :   0 r4 :   0 
 r5 :   0 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16:  16 r17:  10 r18:  15 r19:  12 r20:   5 
-r21:   2 r22:   2 r23:   2 r24:   5 r25:   2 r26:   2 r27:   8 r28:   1 
-r29:   3 r30:   0 r31:   0 
+r13:   0 r14:   0 r15:   0 r16:  16 r17:  10 r18:  19 r19:  19 r20:   3 
+r21:   2 r22:   2 r23:   2 r24:   5 r25:   2 r26:   2 r27:   5 r28:   7 
+r29:  12 r30:   0 r31:   0 
 Registers used: 14 out of 35 (40.0%)
 
 "ATmega328P" instruction use summary:
 .lds  :   0 .sts  :   0 adc   :   0 add   :   1 adiw  :   0 and   :   1 
 andi  :   0 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
-brcc  :   0 brcs  :   0 break :   0 breq  :   4 brge  :   0 brhc  :   0 
-brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   0 brmi  :   0 
-brne  :   9 brpl  :   0 brsh  :   1 brtc  :   0 brts  :   0 brvc  :   0 
+brcc  :   0 brcs  :   0 break :   0 breq  :   9 brge  :   1 brhc  :   0 
+brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   1 brmi  :   0 
+brne  :   8 brpl  :   0 brsh  :   1 brtc  :   0 brts  :   0 brvc  :   0 
 brvs  :   0 bset  :   0 bst   :   0 call  :   3 cbi   :   0 cbr   :   0 
 clc   :   0 clh   :   0 cli   :   1 cln   :   0 clr   :   5 cls   :   0 
-clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   2 cpc   :   0 
-cpi   :   5 cpse  :   0 dec   :   7 eor   :   0 fmul  :   0 fmuls :   0 
-fmulsu:   0 icall :   0 ijmp  :   0 in    :   4 inc   :   3 jmp   :  16 
-ld    :   0 ldd   :   0 ldi   :  25 lds   :   0 lpm   :   0 lsl   :   0 
+clt   :   0 clv   :   0 clz   :   0 com   :   1 cp    :   0 cpc   :   0 
+cpi   :  13 cpse  :   1 dec   :   7 eor   :   0 fmul  :   0 fmuls :   0 
+fmulsu:   0 icall :   0 ijmp  :   0 in    :   4 inc   :   7 jmp   :  24 
+ld    :   0 ldd   :   0 ldi   :  30 lds   :   0 lpm   :   0 lsl   :   0 
 lsr   :   1 mov   :   0 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
-neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :  15 pop   :   4 
+neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :  20 pop   :   4 
 push  :   4 rcall :   0 ret   :   4 reti  :   2 rjmp  :   0 rol   :   0 
 ror   :   0 sbc   :   0 sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 
 sbiw  :   0 sbr   :   0 sbrc  :   1 sbrs  :   0 sec   :   0 seh   :   0 
 sei   :   1 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
 sez   :   0 sleep :   1 spm   :   0 st    :   0 std   :   0 sts   :   2 
 sub   :   0 subi  :   1 swap  :   0 tst   :   0 wdr   :   0 
-Instructions used: 26 out of 113 (23.0%)
+Instructions used: 29 out of 113 (25.7%)
 
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x000158    288      0    288   32768   0.9%
+[.cseg] 0x000000 0x0001b0    376      0    376   32768   1.1%
 [.dseg] 0x000100 0x000100      0      0      0    2048   0.0%
 [.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 

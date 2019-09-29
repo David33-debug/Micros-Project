@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm Sun Sep 29 18:15:03 2019
+AVRASM ver. 2.2.7  C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm Sun Sep 29 23:06:30 2019
 
 
 EQU  SIGNATURE_000 0000001e
@@ -706,18 +706,24 @@ CSEG delay        0000006c
 CSEG sleeping     00000055
 CSEG play         00000076
 CSEG task         00000058
-CSEG gamePlay     00000081
+CSEG gamePlay     0000007f
 CSEG display      00000069
 CSEG setting      00000066
 CSEG delay1       0000006d
 CSEG delay2       0000006e
 CSEG delay3       0000006f
-CSEG delay4S      00000097
-CSEG output2      0000008e
-CSEG output1      00000086
-CSEG output3      00000093
-CSEG loop1        0000009b
-CSEG loop2        0000009c
-CSEG loop3        0000009d
-CSEG loop4        0000009e
-CSEG loop5        0000009f
+CSEG delay4S      000000c3
+CSEG output2      0000008d
+CSEG output1      00000084
+CSEG Score        0000009d
+CSEG output3      00000097
+CSEG score1       000000a4
+CSEG score2       000000ac
+CSEG ten          000000b7
+CSEG elvn         000000bb
+CSEG twlv         000000bf
+CSEG loop1        000000c7
+CSEG loop2        000000c8
+CSEG loop3        000000c9
+CSEG loop4        000000ca
+CSEG loop5        000000cb

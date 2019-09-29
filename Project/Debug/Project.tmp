@@ -39,14 +39,20 @@
   <delay1><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>95</LINE></delay1>
   <delay2><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>97</LINE></delay2>
   <delay3><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>99</LINE></delay3>
-  <delay4S><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>144</LINE></delay4S>
+  <delay4S><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>195</LINE></delay4S>
   <output2><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>134</LINE></output2>
-  <output1><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>126</LINE></output1>
-  <output3><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>139</LINE></output3>
-  <loop1><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>149</LINE></loop1>
-  <loop2><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>151</LINE></loop2>
-  <loop3><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>153</LINE></loop3>
-  <loop4><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>155</LINE></loop4>
-  <loop5><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>157</LINE></loop5>
+  <output1><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>123</LINE></output1>
+  <Score><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>153</LINE></Score>
+  <output3><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>145</LINE></output3>
+  <score1><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>162</LINE></score1>
+  <score2><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>170</LINE></score2>
+  <ten><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>182</LINE></ten>
+  <elvn><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>186</LINE></elvn>
+  <twlv><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>190</LINE></twlv>
+  <loop1><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>200</LINE></loop1>
+  <loop2><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>202</LINE></loop2>
+  <loop3><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>204</LINE></loop3>
+  <loop4><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>206</LINE></loop4>
+  <loop5><FILE>C:\Users\dcurt\Documents\Atmel Studio\7.0\Project\Project\main.asm</FILE><LINE>208</LINE></loop5>
  </LABELS>
 </ASSEMBLER_INFO>
